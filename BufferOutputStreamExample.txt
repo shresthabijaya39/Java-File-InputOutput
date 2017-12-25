@@ -1,0 +1,25 @@
+package slide4_FileIO;
+
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class BufferOutputStreamExample {
+	public static void main(String[] args) throws IOException {
+
+		FileOutputStream fout = new FileOutputStream("D:\\dstud.txt");
+		BufferedOutputStream bout = new BufferedOutputStream(fout);
+
+		String str = "Java Developers in Nepal. \n Running chapter: File HAndling..";
+		byte[] b = str.getBytes();
+		
+		bout.write(b);
+		bout.flush();//if u need to put file forcefully, then you can use a flush.
+		
+		bout.close();
+		fout.close();
+		
+		
+	}
+
+}

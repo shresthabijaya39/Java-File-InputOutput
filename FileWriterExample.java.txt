@@ -1,0 +1,15 @@
+package slide4_FileIO;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterExample {
+	public static void main(String[] args) throws IOException {
+		FileWriter fw = new FileWriter("D:\\fstud.txt");
+		
+		fw.write("Java developersin nepal, ");
+		fw.close();
+		System.out.println("Java developersin nepal, ");
+
+	}
+}

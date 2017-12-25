@@ -1,0 +1,25 @@
+package slide4_FileIO;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class BUfferedInputExample {
+	public static void main(String[] args) throws IOException {
+
+		FileInputStream finn = new FileInputStream("D:\\dstud.txt");
+
+		BufferedInputStream bin = new BufferedInputStream(finn);
+
+		int i = 0;
+
+		while ((i = finn.read()) != -1) {
+			System.out.print((char) i);
+
+		}
+
+		finn.close();
+		bin.close();
+
+	}
+}
